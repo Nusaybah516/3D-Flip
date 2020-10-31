@@ -98,6 +98,12 @@ h2{
     height: 100%
 }
 
+.front-4{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images\ \(1\).jpg);
+    width: 100%;
+    height: 100%
+}
+
 .dev-name {
     display: inline-block;
     width: 180px;
