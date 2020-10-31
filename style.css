@@ -1,29 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    background-image: url("confetti.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#page-header {
+    background-color: rgb(34, 34, 34);
+    padding: 1rem;
 }
 
 .container{
-    width: 100%;
-    height: 100%;
+    flex: 1 1 0%;
+    width: 100vw;
     font-family: 'PT Sans',sans-serif;
 }
 
 h1{
-    color: dodgerblue;
+    color: rgb(27, 137, 247);
     text-align: center;
-    margin: 100px auto 50px;
     font-family: 'Nanum Myeongjo',sans-serif;
+}
+.moderator-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 h2{
-    color: magenta;
+    color: rgb(22, 108, 194);
+    margin-top: 1rem;
     text-align: center;
-    margin: 100px auto 50px;
-    font-family: 'Dancing Script',cursive;
 }
 
 .row{
@@ -40,11 +50,10 @@ h2{
 }
 
 .card{
-    width: 350px;
-    height: 350px;
-    margin: auto;
+    width: 250px;
+    height: 250px;
     perspective: 1000px;
-    cursor: pointer;
+    margin: 20px;
 }
 
 .inner-box{
@@ -57,7 +66,7 @@ h2{
     transform-style: preserve-3d;
 }
 
-.card-front,.card-back{
+.card-front, .card-back{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -72,45 +81,56 @@ h2{
 
 .front-1{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Sodiq.jpg);
-    width: 70%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
 }
 
 .front-2{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(img3.png);
-    width: 70%;
-    height: 70%;
+    width: 100%;
+    height: 100%;
 }
 
 .front-3{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(Babz.jpg);
-    width: 70%;
-    height: 70%
+    width: 100%;
+    height: 100%
 }
 
-span{
+.dev-name {
     display: inline-block;
-    width: 100px;
-    padding: 14px 0;
-    margin-top: 160px;
+    width: 180px;
+    padding: 0.5rem 0;
+    margin-top: 200px;
     border-radius: 4px;
     background: white;
     color: #333;
     transition: transform 1s;
 }
 
-p{
-    display: inline-block;
-    color: black;
-    background: burlywood;
-    padding-bottom: 10px;
-    border-bottom: 1px solid white;
-    margin-top: 140px;
+#page-footer {
+    padding: 1rem;
+    background-color: rgb(34, 34, 34);
+    color: rgb(189, 217, 245);
+}
+
+p.footer-text {
+    text-align: center;
+    font-size: 18px;
 }
 
 .card-back{
-    background:cornflowerblue;
+    display: flex;
     transform:rotateX(180deg);
+    background-color: #b8c2d8be;
+}
+.card-back-content {
+    margin: auto;
+    padding: 2rem;
+}
+.card-back-content p {
+    font-size: 18px;
+    margin-bottom: 1rem;
 }
 
 .card:hover  .inner-box{
@@ -121,8 +141,24 @@ p{
     transform: translateY(140px);
 }
 
-.social-media img{
-    width: 30px;
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-media img {
+    height: 30px;
     margin: 10px 5px;
+    padding: 0.5rem;
+    background-color:white;
+    border-radius: 10px;
+}
+.social-media img:hover {
+    background-color: #ebebeb;
+    cursor: pointer;
 }
 
+.background-pattern {
+    background-color: #e8f5ff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23154dba' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
